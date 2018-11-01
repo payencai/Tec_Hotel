@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollLayout"
+    tools:context=".common.activity.MineActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toobar_head_layout" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/mine_pic"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/mine_pic" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mine_pic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text=""
+                android:textColor="@color/tv_333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/synopsis"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/tv_333"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/synopsis_edit_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@id/synopsis"
+                android:layout_toRightOf="@id/synopsis"
+                android:paddingBottom="13dp"
+                android:paddingLeft="@dimen/aroundLR_edge"
+                android:paddingRight="@dimen/aroundLR_edge"
+                android:paddingTop="13dp"
+                android:src="@mipmap/hotel_write_yellow" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/minePositionLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/mine_position" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="地址"
+                    android:textColor="@color/tv_333"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_e2" />
+
+            <LinearLayout
+                android:id="@+id/mineTelLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/mine_tel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="电话号码"
+                    android:textColor="@color/tv_333"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/aroundLR_edge"
+            android:paddingRight="@dimen/aroundLR_edge">
+
+           <RelativeLayout
+
+               android:layout_width="match_parent"
+               android:layout_height="50dp">
+               <TextView
+                   android:id="@+id/out"
+                   android:layout_toLeftOf="@id/line1"
+                   android:layout_centerVertical="true"
+                   android:textColor="#EB671F"
+                   android:textSize="14sp"
+                   android:text="外景图片(0)"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+               <View
+                   android:layout_marginBottom="10dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginRight="40dp"
+                   android:layout_marginLeft="40dp"
+                   android:id="@+id/line1"
+                   android:layout_centerInParent="true"
+                   android:background="@color/gray_e2"
+                   android:layout_width="1dp"
+                   android:layout_height="match_parent"></View>
+               <TextView
+                   android:id="@+id/in"
+                   android:layout_centerVertical="true"
+                   android:layout_toRightOf="@id/line1"
+                   android:textColor="@color/color_333"
+                   android:textSize="14sp"
+                   android:text="内景图片(0)"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+               <View
+                   android:background="@color/gray_e2"
+                   android:layout_alignParentBottom="true"
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"></View>
+           </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:id="@+id/hotel_photo_rv"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_circular_bead_while"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/synopsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="简介"
+        android:textColor="@color/tv_333"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/cancel"
+        android:layout_width="@dimen/length_view_40dp"
+        android:layout_height="@dimen/length_view_40dp"
+        android:layout_alignParentRight="true"
+        android:padding="14dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/mine_delete_black" />
+
+    <EditText
+        android:id="@+id/synopsis_edit"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@+id/synopsis"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_circular_bead_edit_bg"
+        android:gravity="start"
+        android:hint="最多可入输入300字"
+        android:maxLength="300"
+        android:padding="6dp"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/synopsis_edit"
+        android:layout_marginTop="24dp"
+        android:background="@color/lines" />
+
+    <TextView
+        android:id="@+id/submit"
+        style="@style/common_font"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/view"
+        android:text="确定" />
+</RelativeLayout>

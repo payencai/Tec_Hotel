@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".room_manage.activity.AddRoomActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toobar_head_layout" />
+
+        <EditText
+            android:id="@+id/houseType"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:gravity="start|center_vertical"
+            android:hint="请输入房型"
+            android:paddingLeft="15dp"
+            android:textColor="@color/tv_333"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/imgSelectRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"></android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="36dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_roomtype_height"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:text="数量:" />
+
+                <EditText
+                    android:id="@+id/roomNumber"
+                    android:layout_width="159dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/shape_annulus_edittext_theme_bg"
+                    android:hint="请输入房型数量"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:paddingLeft="8dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_roomtype_height"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:text="定价:" />
+
+                <EditText
+                    android:id="@+id/roomPrice"
+                    android:layout_width="159dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/shape_annulus_edittext_theme_bg"
+                    android:hint="请输入定价"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:paddingLeft="8dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_roomtype_height"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:text="床型:" />
+
+                <EditText
+                    android:id="@+id/bedType"
+                    android:layout_width="159dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/shape_annulus_edittext_theme_bg"
+                    android:hint="双人1.8m大床"
+                    android:maxLines="1"
+                    android:paddingLeft="8dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_roomtype_height"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:text="卫浴:" />
+
+                <EditText
+                    android:id="@+id/bathroom"
+                    android:layout_width="159dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/shape_annulus_edittext_theme_bg"
+                    android:hint="独立卫浴"
+                    android:maxLines="1"
+                    android:paddingLeft="8dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_roomtype_height"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:text="上网:" />
+
+                <EditText
+                    android:id="@+id/network"
+                    android:layout_width="159dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/shape_annulus_edittext_theme_bg"
+                    android:hint="免费WiFi"
+                    android:maxLines="1"
+                    android:paddingLeft="8dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    android:id="@+id/roomDes"
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:text="房间描述:" />
+
+                <EditText
+                    android:id="@+id/describe"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/roomDes"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/shape_annulus_edittext_theme_bg"
+                    android:gravity="start"
+                    android:hint="已入住或空闲"
+                    android:padding="8dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_roomtype_height"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:text="早餐:" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/breakfast"
+                        android:layout_width="@dimen/add_room_radio_btn"
+                        android:layout_height="@dimen/add_room_radio_btn"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/add_room_select_have" />
+
+                    <TextView
+                        style="@style/common_font"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:text="有" />
+
+                    <ImageView
+                        android:id="@+id/unBreakfast"
+                        android:layout_width="@dimen/add_room_radio_btn"
+                        android:layout_height="@dimen/add_room_radio_btn"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/add_room_select_have" />
+
+                    <TextView
+                        style="@style/common_font"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:text="无" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_roomtype_height"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:text="是否可取消:" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/canCancel"
+                        android:layout_width="@dimen/add_room_radio_btn"
+                        android:layout_height="@dimen/add_room_radio_btn"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/add_room_select_have" />
+
+                    <TextView
+                        style="@style/common_font"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:text="是" />
+
+                    <ImageView
+                        android:id="@+id/unCanCancel"
+                        android:layout_width="@dimen/add_room_radio_btn"
+                        android:layout_height="@dimen/add_room_radio_btn"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/add_room_select_have" />
+
+                    <TextView
+                        style="@style/common_font"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:text="否" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_roomtype_height"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:text="使用优惠券:" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/coupon"
+                        android:layout_width="@dimen/add_room_radio_btn"
+                        android:layout_height="@dimen/add_room_radio_btn"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/add_room_select_have" />
+
+                    <TextView
+                        style="@style/common_font"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:text="是" />
+
+                    <ImageView
+                        android:id="@+id/unCoupon"
+                        android:layout_width="@dimen/add_room_radio_btn"
+                        android:layout_height="@dimen/add_room_radio_btn"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/add_room_select_have" />
+
+                    <TextView
+                        style="@style/common_font"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:text="否" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_roomtype_height"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:text="床数量:" />
+
+                <EditText
+                    android:id="@+id/bedNumber"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/shape_annulus_edittext_theme_bg"
+                    android:hint=""
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:paddingLeft="8dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="24dp"
+                    android:text="楼层:" />
+
+                <EditText
+                    android:id="@+id/level1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/shape_annulus_edittext_theme_bg"
+                    android:hint=""
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:paddingLeft="8dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="center_vertical"
+                    android:text="—" />
+
+                <EditText
+                    android:id="@+id/level2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_annulus_edittext_theme_bg"
+                    android:hint=""
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:paddingLeft="8dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_roomtype_height"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:text="可住人数:" />
+
+                <EditText
+                    android:id="@+id/canPutNumber"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/shape_annulus_edittext_theme_bg"
+                    android:hint=""
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:paddingLeft="8dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/submitLayout"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="4dp">
+
+                <TextView
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_rectangle_upper_harf"
+                    android:gravity="center"
+                    android:text="保存"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

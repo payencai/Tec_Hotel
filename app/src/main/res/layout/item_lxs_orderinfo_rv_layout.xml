@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/aroundLR_edge">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_tag"
+            android:layout_width="86dp"
+            android:layout_height="28dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/hotel_order_tag" />
+
+
+        <TextView
+            android:id="@+id/orderId"
+            style="@style/common_font"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/img_tag"
+            android:layout_below="@+id/img_tag"
+            android:layout_marginTop="4dp"
+            android:text="订单编号:26448556154561"
+            android:textColor="@color/color_888"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/placeTime"
+            style="@style/common_font"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/img_tag"
+            android:layout_below="@+id/orderId"
+            android:layout_marginTop="4dp"
+            android:text="下单时间:2018-09-28 11:37:24"
+            android:textColor="@color/color_888"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/orderId"
+            android:layout_marginTop="-10dp"
+            android:text="已付款"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/state"
+            android:layout_marginTop="4dp"
+            android:text=""
+            android:textColor="@color/app_theme_color"
+            android:textSize="@dimen/text_size_16sp" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/placeTime"
+            android:layout_marginTop="12dp"
+            android:background="@color/lines" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/view"
+            android:gravity="center"
+            android:text="订单详情"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/text_size_16sp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/hotelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="56dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="泸沽湖莉莉泛蜜湖"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/roomName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/hotelName"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/hotelName"
+            android:layout_marginRight="56dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="泸沽湖莉莉泛蜜湖"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/timeInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/hotelName"
+            android:layout_below="@+id/roomName"
+            android:layout_marginRight="56dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="2018 02 05"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/breakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/hotelName"
+            android:layout_below="@+id/timeInfo"
+            android:layout_marginTop="4dp"
+            android:text="无早餐|大床"
+            android:textSize="@dimen/text_size_12sp" />
+
+
+        <TextView
+            android:id="@+id/roomNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/roomName"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:text="3间"
+            android:textColor="@color/tv_333" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/placeTime"
+        android:layout_marginBottom="10dp"
+        android:background="@color/lines" />
+
+    <LinearLayout
+        android:id="@+id/bookingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="订房人"
+            android:textColor="@color/color_888"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/bookingName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="某某某"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/bookingTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:maxLength="11"
+            android:text="12345678910"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/text_size_14sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

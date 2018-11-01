@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+    <!-- android:background="@drawable/shape_rectangle_upper_harf"-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/dateType"
+            style="@style/common_font"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/aroundLR_edge"
+            android:text="2014年"
+            android:textColor="@color/tv_333"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/openOrClose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:padding="11dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/hotel_rv_open_or_close2" />
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/record_data_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/aroundLR_edge"
+        android:paddingRight="@dimen/aroundLR_edge"></android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/roomImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/hotel_photo" />
+
+
+    <ImageView
+        android:padding="5dp"
+        android:elevation="2dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/del"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignRight="@id/roomImage"
+        android:layout_alignTop="@id/roomImage"
+        android:src="@mipmap/hotel_pic_delete" />
+    <!-- android:padding="15dp"-->
+    <!--@mipmap/hotel_pic_delete-->
+</RelativeLayout>
